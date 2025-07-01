@@ -1,36 +1,37 @@
 # Fake News Classification
 
-This repository contains my solution to the Fake News Classification problem. The main notebook (`Project_54_Fake_News_Classifier.ipynb`) implements a full pipeline for identifying fake and real news articles using NLP and machine learning. All custom text preprocessing and NLP utilities are modularized in `nlp_utils.py`.
+This repository contains my work on classifying fake and real news articles using NLP and machine learning. The main code is in `Project_54_Fake_News_Classifier.ipynb`, with all text preprocessing and custom NLP utilities modularized in `nlp_utils.py`.
 
 ## Project Highlights
 
-- Built and evaluated supervised learning models to classify news articles as fake or real.
-- Applied preprocessing techniques including contraction removal, tokenization, stemming, and lemmatization (see `nlp_utils.py`).
-- Feature engineering using TF-IDF and CountVectorizer.
-- Performed EDA and label distribution analysis.
-- Used scikit-learn for model development and validation.
+- Supervised learning models to predict fake vs. real news.
+- Custom preprocessing: contraction handling, tokenization, stemming, lemmatization (see `nlp_utils.py`).
+- Feature extraction with TF-IDF and CountVectorizer.
+- EDA and label distribution analysis.
 
-## Structure
+## Repository Structure
 
 ```
 .
-├── Project_54_Fake_News_Classifier.ipynb   # Main notebook (NLP pipeline, EDA, modeling)
-├── nlp_utils.py                            # All custom NLP/text-preprocessing functions
-├── requirements.txt                        # Python dependencies (optional)
+├── Project_54_Fake_News_Classifier.ipynb   # Main notebook
+├── nlp_utils.py                            # Custom NLP/text-preprocessing functions
+├── requirements.txt                        # (optional) dependencies
 └── README.md
 ```
 
 ## Dataset
 
-The dataset (`train.csv`) is not included here due to its size.  
-I used the [Kaggle Fake News dataset](https://www.kaggle.com/c/fake-news/data).  
-To reproduce results, download the train file from Kaggle and place it in the repo root.
+**Note:** The train dataset is not included in this repo due to its size and privacy.  
+It is a local file on my machine, not from Kaggle or a public source.  
+If you want to run the notebook, place your own `train.csv` with the columns:  
+`id, title, author, text, label`  
+in the project root directory.
 
 ## Usage
 
-- All code is in the notebook.  
-- Custom functions are imported from `nlp_utils.py`.
-- Run locally with Jupyter or in Colab (the notebook includes Colab drive mounting code).
+- All code and workflow are in the notebook.
+- Custom functions are imported from `nlp_utils.py`
+- Notebook can be run locally (Jupyter) or on Colab.
 - Example import:
   ```python
   from nlp_utils import lemmatization_sentence
@@ -39,11 +40,12 @@ To reproduce results, download the train file from Kaggle and place it in the re
 ## Environment
 
 - Python 3.x
-- Main libraries: pandas, numpy, scikit-learn, nltk, seaborn
+- pandas, numpy, scikit-learn, nltk, seaborn
 
 ## .gitignore
 
-I kept large datasets out of version control; see `.gitignore`:
+Large datasets are excluded from version control:
+
 ```
 train.csv
 test.csv
@@ -57,4 +59,4 @@ MIT
 
 ---
 
-*This project is part of my portfolio. For details or collaboration, feel free to reach out or open an issue.*
+*Project for my portfolio. For more info or collaboration, please reach out or open an issue.*
